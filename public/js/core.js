@@ -15,7 +15,7 @@
 function translate(eid, lang) {
 	var o = document.getElementById(eid);
 	var text = o.innerHTML;
-	//alert(text);
+
 	google.language.detect(text, function(result) {
     	if (!result.error) {
       		var langCode = result.language;
