@@ -1,0 +1,148 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+body,div,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dd,ol,ul,li,fieldset,form,label,legend,caption{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}ol,ul{list-style:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';}:focus{outline:0;}ins{text-decoration:none;}del{text-decoration:line-through;}table{border-collapse:collapse;border-spacing:0;}
+
+.clear:after {
+	content: ""; display: block; height: 0; clear: both; visibility: hidden;
+}
+a {
+	color: #3e638f;
+}
+a:hover {
+	color: #000;
+}
+div.sinirlayici {
+    margin: 0 auto; width: 960px;
+}
+div {
+    text-align: left;
+}    
+input[type='text'], select, textarea {
+	display: block; font: normal 12px arial, sans-serif; margin: 2px 0 7px 0; /*padding: 3px;*/
+}
+input[type='radio'], select {
+	display: inline;
+}
+button, input.submit {
+	font: bold 12px arial, sans-serif;
+}
+blockquote {
+	border-left: 4px solid #efe0e8; font: italic normal 14px georgia, serif; margin-left: 40px; padding: 0 10px;
+}
+ol {
+	list-style: decimal outside; margin-left: 40px;
+}
+ol > li {
+	display: list-item; font-size: 14px; line-height: 21px;
+}
+label {
+	color: #666; font-size: 12px;
+}
+fieldset.settings {
+	border-top: 1px solid #ddd;
+}
+fieldset.settings label {
+	border-bottom: 1px solid #ddd; display: block; font-size: 14px; padding: 10px 0;
+}
+fieldset.settings label span {
+	display: block; font-weight: bold; padding-bottom: 8px;
+}
+fieldset.settings label span em {
+	color: #858585; font: normal 12px arial;
+}
+p.uyari {
+	background-color: #fcf8d4; font-size: 12px; padding: 5px 10px; margin-bottom: 28px;
+}
+h1 {
+	font: bold 20px arial, sans-serif; margin-bottom: 15px;
+}
+h2 {
+	color: #858585; font: bold 16px arial, sans-serif; margin-bottom: 10px;
+}
+h2.margin {
+	font: bold 16px arial; margin: 25px 0 10px 0;
+}
+ul.list {
+	border-top: 1px solid #dfdfdf;
+}
+ul.list li {
+	border-bottom: 1px solid #dfdfdf; padding: 10px 0;
+}
+ul.list li:target {
+	background-color: #feffbf; padding: 10px;
+}
+ul.list li p {
+	font-size: 14px;
+}
+ul.list li div.entry-info {
+	color: #858585; padding-top: 6px;
+}
+ul.list li div.entry-info a {
+	color: #858585;
+}
+ul.list li div.service {
+	float: left; padding-right: 10px;
+}
+ul.list li div.body {
+	margin-left: 26px;
+}
+ul.list-normal li {
+	font-size: 14px;
+}
+ul.left-margin {
+	margin-left: 20px;
+}
+p.text {
+	font-size: 14px; margin-left: 20px;
+}
+	
+/* *** */
+	
+body {
+	background-color: #f6f6f6; color: #434343; font: normal 12px arial, sans-serif;
+}
+	#ie {
+		background-color: #fffbcc; border-bottom: 1px solid #e6db55; font-size: 12px; padding: 6px 8px; text-align: center;
+	}
+	#ust {
+		background: #d0e1f6 url(../img/arkaplan.gif) repeat-x; border-bottom: 1px solid #b7d2ef; padding: 8px 0 3px 0;
+	}
+		#ust #logo {
+			float: left; margin-right: 20px;
+		}
+		#ust #nav li {
+			float: left; line-height: 41px; margin-right: 8px; padding-right: 8px;
+		}
+			#ust #nav li a {
+				border-bottom: 1px solid #c4c4c4; color: #333; font-size: 14px; font-weight: bold; text-decoration: none;
+			}
+			#ust #nav li a.silik {
+				border-bottom: 1px solid #d9d9d9; color: #7a7a7a;
+			}
+		#ust #kullanici {
+			float: right; margin-top: 5px; width: 200px;
+		}
+			#kullanici a {
+				text-decoration: none;
+			}
+			#kullanici a.kullanici {
+				color: #233f5f;
+			}
+	#orta {
+		background-color: #fff; padding: 30px 0;
+	}
+		#orta #sag {
+			background-color: #f4f4f4; border: 1px solid #aaa; float: right; padding: 14px; width: 220px; w\idth: 192px;
+		}
+		#orta div.info {
+			background-color: #eee; display: inline-block; font-size: 12px; margin-top: 6px; padding: 3px 6px;
+		}
+			#orta div.info a {
+				color: #8199b6;
+			}
+	#alt {
+		border-top: 1px solid #dfdfdf; color: #888; height: 60px; padding: 10px 0; he\ight: 44px;
+	}
+		#alt a {
+			color: #888;
+		}

@@ -1,0 +1,63 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+body,div,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dd,ol,ul,li,fieldset,form,label,legend,caption{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}ol,ul{list-style:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';}:focus{outline:0;}ins{text-decoration:none;}del{text-decoration:line-through;}table{border-collapse:collapse;border-spacing:0;}
+
+.clear:after {
+	content: ""; display: block; height: 0; clear: both; visibility: hidden;
+}
+a {
+	color: #3e638f;
+}
+a:hover {
+	color: #000;
+}
+div {
+    text-align: left;
+}    
+input[type='text'], select, textarea {
+	font: normal 12px arial; margin: 2px 0 7px 0; /*padding: 3px;*/
+}
+button, input.submit {
+	font: bold 12px arial;
+}
+label {
+	color: #666; font-size: 12px;
+}
+fieldset {
+	border-top: 1px solid #ddd;
+}
+fieldset label {
+	border-bottom: 1px solid #ddd; display: block; font-size: 14px; padding: 10px 0;
+}
+h1 a {
+	color: #434343; font: bold 16px arial; margin-bottom: 15px; text-decoration: none;
+}
+h1 a:hover {
+	color: #434343; text-decoration: underline;
+}
+	
+/* *** */
+	
+body {
+	background-color: #d6e5f7; color: #434343; font: normal 12px arial;
+}
+	
+	#content {
+		border-bottom: 1px solid #b7d2ef; height: 79px; padding: 9px 10px; he\ight: 61px;
+	}
+	
+		#content #logo {
+			float: left;
+		}
+		
+		#content #entry {
+			margin-left: 150px;
+		}
+		
+			#content #entry #comment {
+				padding-top: 6px;
+			}
+			
+				#entry #comment input {
+					width: 50%;
+				}
