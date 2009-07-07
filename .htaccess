@@ -1,0 +1,13 @@
+  # htaccess dosyamiz:
+  
+  FileETag none
+
+  SetOutputFilter DEFLATE
+  SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ \ no-gzip dont-vary
+  SetEnvIfNoCase Request_URI \.(?:exe|t?gz|zip|bz2|sit|rar)$ \no-gzip dont-vary
+  SetEnvIfNoCase Request_URI \.pdf$ no-gzip dont-var
+
+  RewriteEngine on
+  RewriteBase /ffmarks
+  RewriteCond $1 !^(index\.php|public|ffapi|_tasarim|m|robots|\.txt)
+  RewriteRule ^(.*)$ index.php/$1 [L]
