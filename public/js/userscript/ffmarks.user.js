@@ -26,7 +26,7 @@ if($_comments.length) {
 				dataType: 'jsonp',
 				data: 'eid=' + $_eid + '&uid=' + $_uid,
 				jsonp: 'jsonp_callback',
-				url: 'http://localhost/ffmarks/add',
+				url: 'http://ffmarks.com/add',
 				success: function(strResponse){
 					$t.after("<em>" + strResponse.message + "</em>");
 					$t.remove();
