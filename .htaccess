@@ -1,4 +1,4 @@
-  # htaccess dosyamiz:
+  # htaccess
   
   FileETag none
 
@@ -9,5 +9,12 @@
 
   RewriteEngine on
   RewriteBase /ffmarks
+  
+  # for www
+  #RewriteBase /
+  #RewriteCond %{HTTP_HOST} .
+  #RewriteCond %{HTTP_HOST} !^ffmarks\.com
+  #RewriteRule (.*) http://ffmarks.com/$1 [R=301,L]
+  
   RewriteCond $1 !^(index\.php|public|ffapi|_tasarim|m|robots|\.txt)
   RewriteRule ^(.*)$ index.php/$1 [L]
