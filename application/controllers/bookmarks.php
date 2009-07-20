@@ -22,6 +22,7 @@ class Bookmarks extends Controller {
 		$data['feed'] = true;
 		$data['feed_title'] = $_nickname.'\'s RSS Feed';
 		$data['feed_url'] = 'http://ffmarks.com/feed/'.$_nickname.'/';
+		$data['sid'] = str_replace('-', '', $this->session->userdata('id'));
 		
 		$config['total_rows'] = $this->bookmarks->count_total_bookmarks($_nickname);
 		$config['per_page'] = 5;
@@ -33,8 +34,18 @@ class Bookmarks extends Controller {
 		$this->load->view('bookmarks/view_bookmarks', $data);
 	}
 	
-	/*function _remap($method) {
-		$this->index($method);
-	}*/
+	function delete() {
+		$_id = $this->uri->segment(3);
+		
+		if(empty($_id) || !is_numeric($_id))
+			return false;
+			
+		$delete = $this->bookmarks->delete($_id);
+		
+		/*if($delete)
+			echo 'Deleted.';*/
+			
+		echo $delete;
+	}
 
 }

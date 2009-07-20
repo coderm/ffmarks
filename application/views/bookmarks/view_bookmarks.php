@@ -8,7 +8,7 @@
 	<ul class="list">
 	<?php
 		foreach($bookmarks as $str):
-			echo '<li>'.
+			echo '<li id="entry-'.$str->fldID.'">'.
 				 '<div class="service"><a href="'.htmlspecialchars($str->fldServiceUrl).'" rel="external nofollow" title="'.$str->fldServiceName.'"><img alt="'.$str->fldServiceName.'" src="'.$str->fldServiceIconUrl.'" /></a></div>'.
 				 '<div class="body">'.
 				 '<p>'.
@@ -42,6 +42,9 @@
 					''				 
 				 ).
 				 ' - <a href="http://friendfeed.com/e/'.$str->fldEntryID.'" rel="external nofollow" title="Permalik for this bookmark">Permalink</a>'.
+				 (
+				 	$sid == $str->fldUserID ? ' - <a class="btn_delete" href="bookmarks/delete/'.$str->fldID.'" title="Delete">Delete</a>' : ''
+				 ).
 				 '</div>'.
 				 '</div>'.
 				 '</li>';

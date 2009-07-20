@@ -10,8 +10,7 @@
 	<h2 class="margin">Thanks to...</h2>
 	
 	<ul class="list-normal left-margin">
-		<li><a href="http://ahmetalpbalkan.com/" rel="external friend nofollow">Ahmet Alp Balkan</a> for the ffmarks logo,</li>
-		<li>and <a href="http://tunatoksoz.com/" rel="external friend nofollow">Tuna Toksoz</a> for English translations.</li>
+		<li><a href="http://tunatoksoz.com/" rel="external friend nofollow">Tuna Toksoz</a> for English translations.</li>
 	</ul>
 	
 	<h2 class="margin">Contact</h2>

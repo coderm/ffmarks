@@ -21,8 +21,8 @@ ffmark's official blog.
 		?>
 		<description><?=$str->fldBody?></description>
 	    <!--<pubDate>{$objRSS->fldTarih|date_format:"%a, %e %b %Y"|replace:'  ':' '} {$objRSS->fldSaat|date_format:"%H:%M:%S"} +0200</pubDate>-->
-		<guid isPermaLink="true">http://ffmarks/blog#entry-<?=$str->fldID?></guid>
-		<link>http://localhost/ffmarks/blog#entry-<?=$str->fldID?></link>
+		<guid isPermaLink="true">http://ffmarks.com/blog#entry-<?=$str->fldID?></guid>
+		<link>http://ffmarks.com/blog#entry-<?=$str->fldID?></link>
     </item>
 <?php
 	endforeach;

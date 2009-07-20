@@ -7,13 +7,13 @@ class Bookmarks_model extends Model {
 		$this->CI =& get_instance();
 	}
 	
-	function get_bookmarks($_nickname, $num, $offset) {
+	function get_bookmarks($_nickname, $num = 0, $offset = 0) {
 		$_uid = $this->get_ff_uid($_nickname);
 		
 		if(!$_uid)
 			return 'No record(s)';
 
-		$this->db->select('fldDate, fldEntryID, fldEntryType, fldUserID, fldServiceName, fldServiceUrl,
+		$this->db->select('fldID, fldDate, fldEntryID, fldEntryType, fldUserID, fldServiceName, fldServiceUrl,
 						   fldServiceIconUrl, fldTitle, fldLink, fldUserProfileUrl, fldUserProfileName');
 		$this->db->from('tblbookmark');
 		$this->db->where('fldUserID', $_uid);
@@ -49,6 +49,21 @@ class Bookmarks_model extends Model {
 		
 		if($row = $query->row()):
 			return str_replace('-', '', $row->fldID);
+		else:
+			return false;
+		endif;
+	}
+	
+	function delete($_id) {
+		$_sid = str_replace('-', '', $this->session->userdata('id'));
+		
+		$this->db->select('fldID, fldUserID');
+		$this->db->from('tblbookmark');
+		$this->db->where('fldID', $_id);
+		$query = $this->db->get();
+		
+		if($row = $query->row()):
+			return $row->fldUserID == $_sid ? $this->db->delete('tblbookmark', array('fldID' => $_id)) : false; 
 		else:
 			return false;
 		endif;

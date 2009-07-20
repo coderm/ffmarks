@@ -1,3 +1,4 @@
+				</div>
 			</div>
 		</div>
 	</div>
@@ -12,12 +13,15 @@
 			<p>(c) 2009 ffmarks is not affiliated with FriendFeed and FriendFeed name is trademark of FriendFeed.</p>
 		</div>
 	</div>
-
-	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	
 	<script type="text/javascript">
-		google.load("jquery", "1.3.2");
+		$(function() {
+			var gaJsHost = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.');
+			$.getScript(gaJsHost + 'google-analytics.com/ga.js', function() {
+				_gat._getTracker('UA-9843242-1')._trackPageview();
+			});	
+		});
 	</script>
-	<script src="<?=base_url()?>public/core.js" type="text/javascript"></script>
 	
 </body>
 </html>

@@ -15,11 +15,7 @@
 function translate(eid, lang) {
 	var o = document.getElementById(eid);
 	var text = o.innerHTML;
-<<<<<<< HEAD:public/js/core.js
 
-=======
-	//alert(text);
->>>>>>> a45fae764489b3ae0cf356df28006ce2036cc00c:public/js/core.js
 	google.language.detect(text, function(result) {
     	if (!result.error) {
       		var langCode = result.language;
@@ -47,6 +43,26 @@ $(function() {
 	$("a[rel*='external']").each(function(){
 		$(this).click(function() {
 			window.open(this.href); return false;
+		});
+	});
+	
+	$("a.btn_delete").each(function(){
+		var $t = $(this);
+		
+		$t.click(function() {
+			var $id = $t.attr('href').replace('bookmarks/delete/', '');
+			
+			$.get($t.attr('href'), function(data) {
+				data = parseInt(data);
+				
+				if (data) {
+					$('#entry-' + $id).slideUp();
+				} else {
+					alert('Something happened wrong.');
+				}
+			});
+		
+			return false;
 		});
 	});
 });

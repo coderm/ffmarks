@@ -14,7 +14,7 @@ class Blog_model extends Model {
 		$query = $this->db->get();
 		$row = $query->result();
 		
-		if($row = $query->result()):
+		if($row):
 			return $row;
 		else:
 			return false;

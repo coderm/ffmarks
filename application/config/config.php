@@ -11,7 +11,11 @@
 |	http://example.com/
 |
 */
-$config['base_url']	= "http://localhost/ffmarks/";
+if($_SERVER['HTTP_HOST'] == 'localhost'):
+	$config['base_url']	= "http://localhost/ffmarks/";
+else:
+	$config['base_url']	= "http://ffmarks.com/";
+endif;
 
 /*
 |--------------------------------------------------------------------------

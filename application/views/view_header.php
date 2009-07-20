@@ -2,7 +2,7 @@
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title><?=$title.' | '.$this->config->item('title')?></title>
+<title><?=(!empty($title) ? $title.' | ' : '').$this->config->item('title')?></title>
 <meta content="text/html; charset=utf-8" />
 <base href="<?=base_url()?>" />
 <?php if(isset($feed)): ?>
@@ -52,29 +52,30 @@
 	</div>
 	
 	<div id="orta">
-		<div class="clear sinirlayici">
-			
-			<?php
-				if(!$this->session->userdata('id')):
-			?>
-			<div id="sag" class="yuvarlak">
-				<h2>Login</h2>
-				<form action="<?=base_url()?>login" method="post">
-					<fieldset>
-						<label>
-							<span>Username</span>
-							<input type="text" name="nickname" style="width: 190px; w\idth: 182px;" value="" />
-						</label>
-						<label>
-							<span>Remote key <span style="font-size: 11px;">(<a href="http://friendfeed.com/remotekey" rel="external">Find your key</a>)</span></span>
-							<input type="text" name="remotekey" style="width: 190px; w\idth: 182px;" value="" />
-						</label>			
-						<input class="submit" name="login_check" title="Login" type="submit" value="Authorize" />
-					</fieldset>
-				</form>
-			</div>
-			<?php
-				endif;
-			?>
-			
-			<div style="margin-right: 275px;">
+		<div style="border-top: 3px solid #EFF7FF;  padding: 20px 0;">
+			<div class="clear sinirlayici">
+				<p class="uyari">ffmarks is currently beta.</p>
+				<?php
+					if(!$this->session->userdata('id')):
+				?>
+				<div id="sag" class="yuvarlak">
+					<h2>Login</h2>
+					<form action="<?=base_url()?>login" method="post">
+						<fieldset>
+							<label>
+								<span>Username</span>
+								<input type="text" name="nickname" style="width: 190px; w\idth: 182px;" value="" />
+							</label>
+							<label>
+								<span>Remote key <span style="font-size: 11px;">(<a href="http://friendfeed.com/remotekey" rel="external">Find your key</a>)</span></span>
+								<input type="text" name="remotekey" style="width: 190px; w\idth: 182px;" value="" />
+							</label>			
+							<input class="submit" name="login_check" title="Login" type="submit" value="Authorize" />
+						</fieldset>
+					</form>
+				</div>
+				<?php
+					endif;
+				?>
+				
+				<div style="margin-right: 275px;">

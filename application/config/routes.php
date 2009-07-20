@@ -40,11 +40,14 @@
 |
 */
 
-$route['default_controller'] = "blog";
+$route['default_controller'] = "welcome";
 $route['scaffolding_trigger'] = "";
 
+$route['bookmarks/delete/([0-9]+)'] = 'bookmarks/delete';
 $route['bookmarks/([a-z]+)'] = 'bookmarks';
 $route['bookmarks/([a-z]+)/([0-9]+)'] = 'bookmarks';
+
+$route['feed/([a-z]+)'] = 'feed';
 
 //$route['about/([a-z]+)'] = 'about';
 

@@ -5,15 +5,22 @@
 <title><?=$title.' | '.$this->config->item('title')?></title>
 <meta content="text/html; charset=utf-8" />
 <base href="<?=base_url()?>" />
-<?php if(isset($feed)): ?>
-<link rel="alternate" type="application/rss+xml" title="<?=$feed_title?>" href="<?=$feed_url?>" />
-<?php endif; ?>
 <link rel="stylesheet" href="<?=base_url()?>public/style/screen-top.css" type="text/css" media="screen" />
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+	google.load("jquery", "1.3.2");
+</script>
+<script type="text/javascript" src="public/js/jquery.jformtip-0.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('input').jFormtip();
+	});
+</script>
 </head>
 <body>
 	
 	<div id="content">
-		<div id="logo"><a href="<?=base_url()?>" target="_parent" title="Return to ffmarks"><img src="public/img/logo.png" alt="Return to ffmarks" /></a></div>
+		<div id="logo"><a href="<?=base_url()?>" target="_parent" title="Return to ffmarks"><img src="public/img/logo-new.png" alt="Return to ffmarks" /></a></div>
 		
 		<div id="entry">
 			<div style="float: right;">

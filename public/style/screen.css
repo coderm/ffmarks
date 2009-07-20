@@ -87,13 +87,16 @@ ul.list li div.body {
 	margin-left: 26px;
 }
 ul.list-normal li {
-	font-size: 14px;
+	font-size: 14px; line-height: 20px;
 }
 ul.left-margin {
 	margin-left: 20px;
 }
 p.text {
 	font-size: 14px; margin-left: 20px;
+}
+img.image {
+	border: 1px solid #dfdfdf; padding: 1px;
 }
 	
 /* *** */
@@ -105,7 +108,7 @@ body {
 		background-color: #fffbcc; border-bottom: 1px solid #e6db55; font-size: 12px; padding: 6px 8px; text-align: center;
 	}
 	#ust {
-		background: #d0e1f6 url(../img/arkaplan.gif) repeat-x; border-bottom: 1px solid #b7d2ef; padding: 8px 0 3px 0;
+		background-color: #fff; border-bottom: 5px solid #DFEEFF; padding: 12px 0 8px 0;
 	}
 		#ust #logo {
 			float: left; margin-right: 20px;
@@ -129,7 +132,7 @@ body {
 				color: #233f5f;
 			}
 	#orta {
-		background-color: #fff; padding: 30px 0;
+		background-color: #fff; border-top: 1px solid #CFE5FF;
 	}
 		#orta #sag {
 			background-color: #f4f4f4; border: 1px solid #aaa; float: right; padding: 14px; width: 220px; w\idth: 192px;

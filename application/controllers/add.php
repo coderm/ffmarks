@@ -23,6 +23,8 @@ class Add extends Controller {
 		 * - User logged kontrol
 		 */
 		
+		$this->load->library('FriendFeed');
+		
 		if(!$this->auth->logged_in()):
 			$_data = "{message: 'Please login.'}";
 		else:

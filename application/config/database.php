@@ -37,14 +37,17 @@
 $active_group = "default";
 $active_record = TRUE;
 
-$db['default']['hostname'] = "localhost";
-$db['default']['username'] = "root";
-$db['default']['password'] = "berker88";
-$db['default']['database'] = "dbffmarks";
-/*$db['default']['hostname'] = "internal-db.s69679.gridserver.com";
-$db['default']['username'] = "db69679";
-$db['default']['password'] = "UuBmcwJY";
-$db['default']['database'] = "db69679_ffmarks";*/
+if($_SERVER['HTTP_HOST'] == 'localhost'):
+	$db['default']['hostname'] = "localhost";
+	$db['default']['username'] = "root";
+	$db['default']['password'] = "berker88";
+	$db['default']['database'] = "dbffmarks";
+else:
+	$db['default']['hostname'] = "internal-db.s69679.gridserver.com";
+	$db['default']['username'] = "db69679";
+	$db['default']['password'] = "UuBmcwJY";
+	$db['default']['database'] = "db69679_ffmarks";
+endif;
 $db['default']['dbdriver'] = "mysql";
 $db['default']['dbprefix'] = "";
 $db['default']['pconnect'] = TRUE;

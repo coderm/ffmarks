@@ -4,11 +4,11 @@ class Go extends Controller {
 
 	function __construct() {
 		parent::Controller();
-		
-		//$this->load->model('Bookmarks_model', 'bookmarks');
 	}
 	
 	function index($_eid = '') {
+		//$this->load->model('Bookmarks_model', 'bookmarks');
+		
 		$data['title'] = 'Entry title';
 		
 		//$this->auth->restrict();
