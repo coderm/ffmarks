@@ -26,7 +26,7 @@ class Add extends Controller {
 		$this->load->library('FriendFeed');
 		
 		if(!$this->auth->logged_in()):
-			$_data = "{message: 'Please login.'}";
+			$_data = "{message: 'Please <a href=\"http://ffmarks.com\" onclick=\"window.open(this.href);return false;\">login</a>.'}";
 		else:
 		
 			$_uid = $this->input->get('uid');

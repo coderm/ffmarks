@@ -5,6 +5,8 @@
 	<?php 
 		if(isset($error)):
 			echo '<p>'.$error.'</p>';
+		else:
+			echo '<p>Please login.</p>';
 		endif;
 	?>
 

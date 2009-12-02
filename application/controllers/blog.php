@@ -13,6 +13,8 @@ class Blog extends Controller {
 		
 		$data['title'] = 'Blog';
 		
+		$data['is_blog'] = true;
+		
 		$data['feed'] = true;
 		$data['feed_title'] = 'ffmarks Blog RSS Feed';
 		$data['feed_url'] = 'http://ffmarks.com/blog/feed/';

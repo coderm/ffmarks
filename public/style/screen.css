@@ -86,12 +86,30 @@ ul.list li div.service {
 ul.list li div.body {
 	margin-left: 26px;
 }
+	div.body p a.entry-permalink-me {
+		color: #858585; font-size: 12px; text-decoration: none;
+	}
+	div.body p a.entry-permalink-me:hover {
+		text-decoration: underline;
+	}
 ul.list-normal li {
 	font-size: 14px; line-height: 20px;
 }
 ul.left-margin {
 	margin-left: 20px;
 }
+ul.pagination {
+	display: inline-block; margin-top: 10px;
+}
+	ul.pagination li {
+		float: left; padding: 0 3px;
+	}
+	ul.pagination li.active {
+		font-weight: bold;
+	}
+	ul.pagination li a {
+		
+	}
 p.text {
 	font-size: 14px; margin-left: 20px;
 }
@@ -102,7 +120,7 @@ img.image {
 /* *** */
 	
 body {
-	background-color: #f6f6f6; color: #434343; font: normal 12px arial, sans-serif;
+	background-color: #fff; color: #434343; font: normal 12px arial, sans-serif;
 }
 	#ie {
 		background-color: #fffbcc; border-bottom: 1px solid #e6db55; font-size: 12px; padding: 6px 8px; text-align: center;
@@ -132,16 +150,25 @@ body {
 				color: #233f5f;
 			}
 	#orta {
-		background-color: #fff; border-top: 1px solid #CFE5FF;
+		background-color: #EFF7FF; border-top: 1px solid #CFE5FF;
 	}
 		#orta #sag {
-			background-color: #f4f4f4; border: 1px solid #aaa; float: right; padding: 14px; width: 220px; w\idth: 192px;
+			float: right;
 		}
+			#sag .sag-kutu {
+				background-color: #f5faff; /*#f4f4f4;*/ border: 2px solid #EFF7FF; margin-bottom: 15px; padding: 14px; width: 220px; w\idth: 192px;
+			}
 		#orta div.info {
 			background-color: #eee; display: inline-block; font-size: 12px; margin-top: 6px; padding: 3px 6px;
 		}
 			#orta div.info a {
 				color: #8199b6;
+			}
+			#orta div.info a.entry-permalink {
+				color: #858585; text-decoration: none;
+			}
+			#orta div.info a.entry-permalink:hover {
+				text-decoration: underline;
 			}
 	#alt {
 		border-top: 1px solid #dfdfdf; color: #888; height: 60px; padding: 10px 0; he\ight: 44px;

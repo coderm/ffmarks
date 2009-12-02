@@ -18,7 +18,44 @@ class Bookmarks_model extends Model {
 		$this->db->from('tblbookmark');
 		$this->db->where('fldUserID', $_uid);
 		$this->db->order_by('fldID', 'desc');
-		//$this->db->limit($num, $offset);
+		$this->db->limit($num, $offset);
+		$query = $this->db->get();
+		$row = $query->result();
+		
+		if($row = $query->result()):
+			return $row;
+		else:
+			return false;
+		endif;
+	}
+	
+	function get_my_last_bookmarks($_nickname) {
+		$_uid = $this->get_ff_uid($_nickname);
+		
+		if(!$_uid)
+			return 'No record(s)';
+
+		$this->db->select('fldID, fldDate, fldEntryID, fldEntryType, fldUserID, fldServiceName, fldServiceUrl,
+						   fldServiceIconUrl, fldTitle, fldLink, fldUserProfileUrl, fldUserProfileName');
+		$this->db->from('tblbookmark');
+		$this->db->where('fldUserID', $_uid);
+		$this->db->order_by('fldID', 'desc');
+		$this->db->limit(10);
+		$query = $this->db->get();
+		$row = $query->result();
+		
+		if($row = $query->result()):
+			return $row;
+		else:
+			return false;
+		endif;
+	}
+	
+	function get_new_users() {
+		$this->db->select('fldID, fldUsername, fldDate');
+		$this->db->from('tbluser');
+		$this->db->order_by('fldDate', 'desc');
+		$this->db->limit(10);
 		$query = $this->db->get();
 		$row = $query->result();
 		

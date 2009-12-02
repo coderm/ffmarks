@@ -40,6 +40,10 @@ $(function() {
 		$(this).css({ "border-radius": "4px", "-moz-border-radius": "4px", "-webkit-border-radius": "4px", "-khtml-border-radius": "4px" });
 	});
 	
+	$(".yuvarlak10").each(function() {
+		$(this).css({ "border-radius": "10px", "-moz-border-radius": "10px", "-webkit-border-radius": "10px", "-khtml-border-radius": "10px" });
+	});
+	
 	$("a[rel*='external']").each(function(){
 		$(this).click(function() {
 			window.open(this.href); return false;

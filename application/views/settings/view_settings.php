@@ -6,7 +6,7 @@
 	<form action="?" method="post">
 		<fieldset class="settings">
 			<label>
-				<span>Public bookmarks <em>&#8212; Yerimlerinizi kimlerin görüntüleyebileceğini belirlemenize yarar.</em></span>
+				<span>Public bookmarks <em>&#8212; Who would be able to view your own bookmarks?</em></span>
 				<input type="radio" name="frmPublic" value="1" /> Yes
 				<input type="radio" name="frmPublic" value="0" /> No
 			</label>

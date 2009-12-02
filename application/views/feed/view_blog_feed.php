@@ -1,6 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
 <atom:link href="http://ffmarks.com/blog/feed/" rel="self" type="application/rss+xml" />
+<atom:link rel="hub" href="http://pubsubhubbub.appspot.com" />
 <title>ffmarks Blog</title>
 <link>http://ffmarks.com/blog/feed/</link>
 <language>en-US</language>

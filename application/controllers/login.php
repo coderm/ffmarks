@@ -27,7 +27,7 @@ class Login extends Controller {
 	
 	function out() {
 		if($this->auth->logout()) 
-			redirect('/login');
+			redirect();
 	}
 
 }

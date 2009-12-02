@@ -12,10 +12,4 @@ class About extends Controller {
 		$this->load->view('about/view_about', $data);
 	}
 	
-	function source() {
-		$data['title'] = 'Source';
-		
-		$this->load->view('about/view_source', $data);
-	}
-	
 }

@@ -42,6 +42,8 @@ class Auth {
 		else:
 			return false;
 		endif;
+		
+		return true;
 	}
 	
 	/**
