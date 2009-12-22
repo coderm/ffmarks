@@ -1,5 +1,5 @@
 	
-	<?=$this->load->view('view_header')?>
+	<?php echo $this->load->view('view_header'); ?>
 
 	<h1>About</h1>
 	
@@ -28,4 +28,4 @@
 		Contact us by our FriendFeed <a href="http://friendfeed.com/ffmarks" rel="external nofollow" title="ffmarks Feedback Group">group</a>.
 	</p>
 	
-	<?=$this->load->view('view_footer')?>
+	<?php echo $this->load->view('view_footer'); ?>

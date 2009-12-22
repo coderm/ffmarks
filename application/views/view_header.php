@@ -2,13 +2,13 @@
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title><?=(!empty($title) ? $title.' | ' : '').$this->config->item('title')?></title>
+<title><?php echo (!empty($title) ? $title.' | ' : '').$this->config->item('title'); ?></title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-<base href="<?=base_url()?>" />
+<base href="<?php echo base_url(); ?>" />
 <?php if(isset($feed)): ?>
-<link rel="alternate" type="application/rss+xml" title="<?=$feed_title?>" href="<?=$feed_url?>" />
+<link rel="alternate" type="application/rss+xml" title="<?php echo $feed_title; ?>" href="<?php echo $feed_url;?>" />
 <?php endif; ?>
-<link rel="stylesheet" href="<?=base_url()?>public/style/screen.css?v=20090811" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php echo base_url();?>public/style/screen.css?v=20090811" type="text/css" media="screen" />
 <script type="text/javascript" src="http://www.google.com/jsapi"></script>
 <script type="text/javascript">
 	google.load("jquery", "1.3.2");
@@ -24,22 +24,22 @@
 			?>
 			<div class="clear" id="kullanici">
 				<div style="float: left; padding-right: 8px;">
-					<a href="http://friendfeed.com/<?=$this->session->userdata('nickname')?>" title="<?=$this->session->userdata('nickname')?>'s FriendFeed"><img alt="<?=$this->session->userdata('nickname')?>" src="<?='http://i.friendfeed.com/p-'.str_replace('-', '', $this->session->userdata('id')).'-small-1'?>" style="border: 1px solid #c4c4c4;" /></a>
+					<a href="http://friendfeed.com/<?php echo $this->session->userdata('nickname'); ?>" title="<?php echo $this->session->userdata('nickname'); ?>'s FriendFeed"><img alt="<?php echo $this->session->userdata('nickname'); ?>" src="<?php echo 'http://i.friendfeed.com/p-'.str_replace('-', '', $this->session->userdata('id')).'-small-1'?>" style="border: 1px solid #c4c4c4;" /></a>
 				</div>
 				<div style="line-height: 27px;">
-					<a href="http://friendfeed.com/<?=$this->session->userdata('nickname')?>" title="<?=$this->session->userdata('nickname')?>'s FriendFeed" class="kullanici"><?=$this->session->userdata('nickname')?></a>
+					<a href="http://friendfeed.com/<?php echo $this->session->userdata('nickname'); ?>" title="<?php echo $this->session->userdata('nickname'); ?>'s FriendFeed" class="kullanici"><?php echo $this->session->userdata('nickname'); ?></a>
 					(<a href="login/out" title="Logout">Logout</a>)
 				</div>
 			</div>
 			<?php
 				endif;
 			?>
-			<div id="logo"><a href="<?=base_url()?>" title="ffmarks"><img src="public/img/logo-new.png" alt="ffmarks" /></a></div>
+			<div id="logo"><a href="<?php echo base_url(); ?>" title="ffmarks"><img src="public/img/logo-new.png" alt="ffmarks" /></a></div>
 			<ul id="nav">
 				<?php
 					if($this->session->userdata('id')):
 				?>
-				<li><?=anchor('bookmarks/'.$this->session->userdata('nickname'), 'Bookmarks');?></li>
+				<li><?php echo anchor('bookmarks/'.$this->session->userdata('nickname'), 'Bookmarks'); ?></li>
 				<li><a href="offline" title="Offline">Offline</a></li>
 				<li><a href="settings" title="Settings">Settings</a></li>
 				<?php
@@ -62,7 +62,7 @@
 				?>
 				<div class="sag-kutu yuvarlak">
 					<h2>Login</h2>
-					<form action="<?=base_url()?>login" method="post">
+					<form action="<?php echo base_url(); ?>login" method="post">
 						<fieldset>
 							<label>
 								<span>Username</span>

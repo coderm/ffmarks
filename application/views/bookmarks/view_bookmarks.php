@@ -1,4 +1,4 @@
-	<?=$this->load->view('view_header')?>
+	<?php echo $this->load->view('view_header'); ?>
 	<?php
 		if(!$user):
 	?>
@@ -8,7 +8,7 @@
 	<?php
 		else:
 	?>
-	<h1>Bookmarks of <?=$nickname?> <a href="feed/<?=$nickname?>/" title="RSS Feed"><img alt="RSS Feed" src="public/img/feed-icon-14x14.png" /></a></h1>
+	<h1>Bookmarks of <?php echo $nickname; ?> <a href="feed/<?php echo $nickname; ?>/" title="RSS Feed"><img alt="RSS Feed" src="public/img/feed-icon-14x14.png" /></a></h1>
 	
 	<?php
 			if($bookmarks):
@@ -73,4 +73,4 @@
 		endif;
 	?>
 	
-	<?=$this->load->view('view_footer')?>
+	<?php echo $this->load->view('view_footer'); ?>

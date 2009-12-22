@@ -1,5 +1,5 @@
 	
-	<?=$this->load->view('view_header')?>
+	<?php echo $this->load->view('view_header'); ?>
 
 	<h1>Blog <a href="blog/feed/" title="RSS Feed"><img alt="RSS Feed" src="public/img/feed-icon-14x14.png" /></a></h1>
 	
@@ -10,12 +10,12 @@
 	<?php
 		foreach($blog as $str):
 	?>
-		<li id="entry-<?=$str->fldID?>">
+		<li id="entry-<?php echo $str->fldID; ?>">
 			
-			<p><?=(!empty($str->fldTitle) ? '<strong>'.$str->fldTitle.'</strong> — ' : '')?><?=$str->fldBody?></p>
+			<p><?php echo (!empty($str->fldTitle) ? '<strong>'.$str->fldTitle.'</strong> — ' : ''); ?><?php echo $str->fldBody; ?></p>
 			<div class="entry-info">
-				Added <?=timespan(mysql_to_unix($str->fldDate), time())?> ago. - 
-				<a href="blog#entry-<?=$str->fldID?>">Permalink</a>
+				Added <?php echo timespan(mysql_to_unix($str->fldDate), time()); ?> ago. -
+				<a href="blog#entry-<?php echo $str->fldID; ?>">Permalink</a>
 			</div>
 		</li>
 	<?php
@@ -30,4 +30,4 @@
 		endif;
 	?>
 	
-	<?=$this->load->view('view_footer')?>
+	<?php echo $this->load->view('view_footer'); ?>

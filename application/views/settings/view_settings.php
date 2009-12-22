@@ -1,5 +1,5 @@
 	
-	<?=$this->load->view('view_header')?>
+	<?php echo $this->load->view('view_header'); ?>
 
 	<h1>Settings</h1>
 	
@@ -17,9 +17,9 @@
 				</select>
 			</label>
 			<div style="padding-top: 10px; text-align: center;">
-				<button title="Update your settings" type="submit">Update</button> or <a href="<?=$this->agent->referrer()?>" title="Go back...">go back</a>
+				<button title="Update your settings" type="submit">Update</button> or <a href="<?php echo $this->agent->referrer(); ?>" title="Go back...">go back</a>
 			</div>
 		</fieldset>
 	</form>
 	
-	<?=$this->load->view('view_footer')?>
+	<?php echo $this->load->view('view_footer'); ?>
