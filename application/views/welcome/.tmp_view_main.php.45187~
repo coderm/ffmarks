@@ -1,6 +1,0 @@
-	
-	<?=$this->load->view('view_header')?>
-
-	<h1>Welcome, <?=$username?></h1>
-	
-	<?=$this->load->view('view_footer')?>
